@@ -27,6 +27,7 @@ export default function Home({ content }: Props) {
         {content}
       </ReactMarkdown>
     </div>
+    <div>沪ICP备2024082259号</div>
     </div>
   );
 }

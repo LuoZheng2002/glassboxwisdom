@@ -49,6 +49,7 @@ export default function Home({ content }: Props) {
       </div>
       <Image src={diamond} width={180} alt='diamond' className={style.diamond} />
       <Image src={glassblock} width={300} alt='glassblock' className={style.glassblock} />
+      <div>沪ICP备2024082259号</div>
     </div>
   );
 }
