@@ -1,0 +1,11 @@
+.topic{
+    font-size: 50px;
+    padding: 20px 20px 30px 50px;
+    background: linear-gradient(110deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff); /* Rainbow gradient */
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-bottom: -20px;
+}
+.markdownwrap{
+    margin: 100px;
+}

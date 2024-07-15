@@ -1,0 +1,26 @@
+.markdown {
+    /* // some root styles here */
+  }
+  
+  .markdown ul {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    list-style: disc outside none;
+  }
+  
+  .markdown ul li {
+    margin-left: 2em;
+    display: list-item;
+    text-align: -webkit-match-parent;
+  }
+   .markdown p { 
+    font-size: 30px;
+    font-weight: 400; 
+    white-space: pre-wrap;
+  }
+  /* // your other styles but all under .reactMarkDown blocks */
+
+  .markdown h1{
+    font-size: 40px;
+    font-weight: bold;
+  }

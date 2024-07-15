@@ -1,0 +1,27 @@
+/* components/RainbowButton.module.css */
+.rainbowButton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff); /* Rainbow gradient */
+  }
+  
+  .rainbowButton:hover {
+    background-size: 200% auto;
+    animation: rainbowAnimation 1.5s infinite alternate;
+  }
+  
+  @keyframes rainbowAnimation {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
