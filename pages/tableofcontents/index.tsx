@@ -7,16 +7,34 @@ import { Navbar } from "@/components/navbar";
 import Link from "next/link";
 export default function Home() {
     const router = useRouter();
-    let contents = ["Chapter 1", "Chapter 2", "3", "4", "5", "6"].map((value) => {
+    let map2: Map<string, string> = new Map();
+    map2.set('1', 'Chapter 1: Connectionism AI');
+    map2.set('2', 'Chapter 2');
+    map2.set('3', 'Chapter 3');
+    map2.set('4', 'Chapter 3');
+    map2.set('5', 'Chapter 3');
+    map2.set('6', 'Chapter 3');
+    map2.set('7', 'Chapter 3');
+    map2.set('8', 'Chapter 3');
+    map2.set('9', 'Chapter 3');
+    map2.set('10', 'Chapter 3');
+    map2.set('11', 'Chapter 3');
+    map2.set('12', 'Chapter 3');
+    map2.set('13', 'Chapter 3');
+    map2.set('14', 'Chapter 3');
+    map2.set('15', 'Chapter 3');
+    let contents: JSX.Element[] = [];
+    map2.forEach((value, key, map)=>{
         let click = () => {
-            router.push('/chapters');
+            router.push(`/chapters/chapter${key}`);
         }
-        return (
+        contents.push(
             <div className={style.button} style={{display: "flex", justifyContent: "center", margin: "1vw" }}>
                 <Button textSize="2.5vw" onClick={click}>{value}</Button>
             </div>
         );
     });
+    
     let clickreturn = () => {
         router.push('/');
     }
