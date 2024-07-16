@@ -14,13 +14,13 @@
     text-align: -webkit-match-parent;
   }
    .markdown p { 
-    font-size: 2vw;
+    font-size: clamp(20px, 2vw, 40px);
     font-weight: 400; 
     white-space: pre-wrap;
   }
   /* // your other styles but all under .reactMarkDown blocks */
 
   .markdown h1{
-    font-size: 3vw;
+    font-size: clamp(30px, 3vw, 60px);
     font-weight: bold;
   }

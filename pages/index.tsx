@@ -25,7 +25,7 @@ export default function Home({ content }: Props) {
     // Perform any action before navigation, if needed
     console.log('Button clicked!');
     // Navigate programmatically
-    router.push('/chapters');
+    router.push('/tableofcontents');
   };
 
 
@@ -65,7 +65,7 @@ export default function Home({ content }: Props) {
 
         </div>
       </div>
-      <div>沪ICP备2024082259号</div>
+      
     </div>
   );
 }

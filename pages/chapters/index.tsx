@@ -8,26 +8,38 @@ import path from 'path';
 import fs from 'fs';
 import style from 'markdown-styles.module.css';
 import style2 from './index.module.css';
+import Button from '@/components/button';
+import { useRouter } from 'next/router';
+import { Navbar } from '@/components/navbar';
+import Link from 'next/link';
 type Props = {
   content: string
 };
 
 export default function Home({ content }: Props) {
+  let rounter = useRouter();
+  let click = () => {
+    rounter.push("/tableofcontents");
+  }
   return (
     <div>
-        <div className={style2.topic}>
+      <Navbar>
+        <Link href={"/"}>home</Link> &gt;&nbsp;
+        <Link href={"tableofcontents"}>Background Knowledge & Inspirations</Link> &gt;&nbsp;
+        <Link href={"chapters"}>Chapter 1</Link>
+      </Navbar>
+      <div id="chapter tag" className={style2.topic}>
         Chapter 1: Connectionism AI
       </div>
-    <div className={style2.markdownwrap}>
-      <ReactMarkdown
-        remarkPlugins={[remarkGfm, remarkMath]}
-        rehypePlugins={[rehypeKatex]}
-        className={style.markdown}
+      <div className={style2.markdownwrap}>
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm, remarkMath]}
+          rehypePlugins={[rehypeKatex]}
+          className={style.markdown}
         >
-        {content}
-      </ReactMarkdown>
-    </div>
-    <div>沪ICP备2024082259号</div>
+          {content}
+        </ReactMarkdown>
+      </div>
     </div>
   );
 }
@@ -35,7 +47,7 @@ export default function Home({ content }: Props) {
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const contentDirectory = path.join(process.cwd(), 'markdown');
   const fullPath = path.join(contentDirectory, 'introduction.md');
-  const content = fs.readFileSync(fullPath,'utf8');
+  const content = fs.readFileSync(fullPath, 'utf8');
   return {
     props: {
       content: content

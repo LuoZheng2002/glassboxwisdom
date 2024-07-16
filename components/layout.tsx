@@ -13,10 +13,10 @@ export default function Layout({children}: Prop) {
                     <Image src={glassblock} alt="picture" layout="responsive"/>
                 </span>
                 <span className={style.website}>glassboxwisdom.com</span>
-                <span className={style.description}>We thrive to provide an explicit explainable AI solution.</span>
+                <span className={style.description}>We are committed to providing an explicit & explainable AI solution.</span>
             </div>
-            
             {children}
+            <div>沪ICP备2024082259号</div>
         </div>
     )
   }
