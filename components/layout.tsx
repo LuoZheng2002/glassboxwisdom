@@ -9,7 +9,9 @@ export default function Layout({children}: Prop) {
     return (
         <div>
             <div className={style.outer}>
-                <Image src={glassblock} alt="picture" width={50} height={50} style={{display: "inline-flex", marginRight: "20px"}}/>
+                <span style={{width: "4vw", height: "4vw", marginRight: "2vw"}}>
+                    <Image src={glassblock} alt="picture" layout="responsive"/>
+                </span>
                 <span className={style.website}>glassboxwisdom.com</span>
                 <span className={style.description}>We thrive to provide an explicit explainable AI solution.</span>
             </div>

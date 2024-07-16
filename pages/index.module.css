@@ -1,67 +1,59 @@
 .relative{
     position: relative;
 }
-.welcome{
-    position: absolute;
-    top: 6%;
-    left: 20%;
-    display: flex;
-    font-size: 70px;
+.welcomecolor{
     background: linear-gradient(30deg, #69ebf1, #dff6f7, #77e6f3); /* 渐变背景 */
     background-clip: text; /* 使用背景裁剪文本 */
     -webkit-text-fill-color: transparent; /* 使文本颜色透明，以显示背景渐变 */
     font-weight: bold;
 }
 .intro{
-    position: absolute;
-    top: 25%;
-    left: 5%;
-    font-size: 40px;
     color:white;
     font-weight: bold;
 }
 .journey{
-    position: absolute;
-    top: 45%;
-    left: 35%;
-    font-size: 50px;
+    font-size: 3vw;
     color:#17efb6;
     font-weight: bold;
 }
-.span{
+.intro span{
     background: linear-gradient(45deg, red 0%, gold 50%, red 100%); /* 渐变背景 */
     background-clip: text; /* 使用背景裁剪文本 */
     -webkit-text-fill-color: transparent; /* 使文本颜色透明，以显示背景渐变 */
     font-weight: bold;
-    font-size: 45px;
+    font-size: 3vw;
 }
 .glassblock{
-    position: absolute;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    width: 20vw;
+    height:20vw;
     display: flex;
-    bottom: 60px;
-    left: 100px;
     animation: rotateAnimation1 10s linear infinite;
 }
 .diamond{
-    position: absolute;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    width: 12vw;
+    height:12vw;
     display: flex;
-    bottom: 120px;
-    left: 160px;
     animation: rotateAnimation2 5s linear infinite;
 }
 @keyframes rotateAnimation1 {
     from {
-        transform: rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
     }
     to {
-        transform: rotate(360deg);
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
 @keyframes rotateAnimation2 {
     from {
-        transform: rotate(360deg);
+        transform: translate(-50%, -50%) rotate(360deg);
     }
     to {
-        transform: rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
     }
 }
