@@ -27,19 +27,24 @@ export default function Home({ content }: Props) {
     // Navigate programmatically
     router.push('/tableofcontents');
   };
-
+  const handleClick2 = () =>{
+    router.push('/test');
+  }
+  const handleClick3 = () =>{
+    router.push('/test');
+  }
 
   return (
-    <div>
+    <div style={{flexGrow: "1", display: "flex", backgroundColor:"yellow", flexDirection:"column"}}>
       <Head>
         <title>Glass Box Wisdom</title>
         <meta name="description" content="This is an awesome page built with Next.js" />
       </Head>
-      <div className={style.relative}>
-        <Image src={scifi} alt="hello" />
+      <div className={style.relative} style={{flexGrow: "1"}}>
+        <Image src={scifi} alt="hello" fill objectFit='cover'/>
         <div style={{position: 'absolute', top: "0%", left: "0%", right: "0%", bottom: "0%", display: "flex", flexDirection: "column" }} >
-          <div style={{ fontSize: "5vw", margin: "5vw 0 2vw 0", textAlign: "center" }} className={style.welcomecolor}>Welcome AI enthusiast!</div>
-          <div style={{ fontSize: "3vw", margin: "0 0 0 5vw" }} className={style.intro}>
+          <div style={{ fontSize: "5vw", margin: "1vw 0 0 0", textAlign: "center" }} className={style.welcomecolor}>Welcome AI enthusiast!</div>
+          <div style={{ fontSize: "3vw", margin: "0 0 0 2vw" }} className={style.intro}>
             glassboxwisdom.com is a place for&nbsp;
             <span>Explicit</span> and&nbsp;
             <span>Explainable</span> AI, <br></br>
@@ -48,7 +53,7 @@ export default function Home({ content }: Props) {
             <span>Connectionism</span>.
           </div>
           <div style={{ display: "flex", flexGrow: "1" }}>
-            <div style={{ width: "40%", height: "auto", position: "relative", display: "flex" }}>
+            <div style={{ width: "30%", height: "auto", position: "relative", display: "flex" }}>
               <div className={style.diamond}>
                 <Image src={diamond} alt='diamond' layout="responsive" />
               </div>
@@ -57,9 +62,11 @@ export default function Home({ content }: Props) {
               </div>
 
             </div>
-            <div style={{display: "block", flexGrow: "1", flexDirection: "row" }}>
+            <div style={{display: "flex", alignItems: "center", flexGrow: "1", flexDirection: "column" }}>
               <div style={{display: "flex"}} className={style.journey}>Let's dive into the journey! (Click↓)</div>
-              <Button onClick={handleClick}>Background Knowledge & Inspirations</Button>
+              <Button onClick={handleClick}  textSize='2.5vw'>Background Knowledge & Inspirations</Button>
+              <Button onClick={handleClick2} textSize='2.5vw'>Research and Implementation Plan</Button>
+              <Button onClick={handleClick3} textSize='2.5vw'>Demo</Button>
             </div>
           </div>
 

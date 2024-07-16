@@ -1,5 +1,6 @@
 .relative{
     position: relative;
+    display: flex;
 }
 .welcomecolor{
     background: linear-gradient(30deg, #69ebf1, #dff6f7, #77e6f3); /* 渐变背景 */
@@ -25,7 +26,7 @@
 }
 .glassblock{
     position:absolute;
-    top: 50%;
+    top: 12vw;
     left: 50%;
     width: 20vw;
     height:20vw;
@@ -34,7 +35,7 @@
 }
 .diamond{
     position:absolute;
-    top: 50%;
+    top: 12vw;
     left: 50%;
     width: 12vw;
     height:12vw;
