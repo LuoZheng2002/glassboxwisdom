@@ -141,7 +141,7 @@ So what is the root of the conflict? It is that we do not put true efforts in AI
     <img src="/images/tom.gif" alt="tom" style="width: 80%; height: auto; float: left" title="Connectionist AI developers be like ...">
 </div>
 
-By the way, I would like promote a phiolosophy I believe: the less directly we manipulate something, the less control we have over it. It holds true most of the time, especially in real life. Exceptions of it require sufficient justifications for us to believe. For example, when we want to dig a hole on the ground, we may use shovels directly, or we can build a vehicle factory, produce excavators, and let excavators dig for us. The latter turns out to be a more efficient solution in the long run although it is indirect, and we are all convinced that this will work. However, I am not convinced so far that, by spending efforts on something like gathering more data, or improving computation power we can invent the next generation AI, since these efforts do not improve the core algorithm and break the current constraints.
+By the way, I would like to promote a phiolosophy I believe: the less directly we manipulate something, the less control we have over it. It holds true most of the time, especially in real life. Exceptions of it require sufficient justifications for us to believe. For example, when we want to dig a hole on the ground, we may use shovels directly, or we can build a vehicle factory, produce excavators, and let excavators dig for us. The latter turns out to be a more efficient solution in the long run although it is indirect, and we are all convinced that this will work. However, I am not convinced so far that, by spending efforts on something like gathering more data, or improving computation power we can invent the next generation AI, since these efforts do not improve the core algorithm and break the current constraints.
 
 <div style="display: flex; align-items: flex-start">
     <span style="width: 10%"></span>
@@ -160,7 +160,7 @@ Contemporary mainstream AI paradigm "connectionism", mainly composed of machine 
 The best way to achieve controllability, as mentioned above, is to code AI's logic explicitly. However, under this context, it is hard to achieve flexibility because flexibility means deep coupling between components. For example, if we want AI to go to a chair and get seated, we might want the transition to be smooth, which requires nontrivial communications between the "walk" and "sit down" components. We human beings are not good at dealing with deeply coupled components because firstly, there is no rule or recipe we can follow to come up with such a solution, and secondly, verifying whether a complex and deeply-coupled algorithm is correct is hard enough, let alone coming up with one. On the other hand, if the AI system is sufficiently decoupled, it is much easier to develop and maintain beause we can adopt the "divide and conquer" strategy to solve problems separately. However, in this way AI will behave rigidly: it may have to walk to the place exactly in front of the chair, turn around and sit down.
 
 <div style="display: flex; align-items: flex-start">
-    <img src="/images/graph.webp" alt="graph" style="width: 30%; height: auto; float: left" title="A deeply coupled system of n components can have up to O(n^2) interal connections.">
+    <img src="/images/graph.webp" alt="graph" style="width: 30%; height: auto; float: left" title="A deeply coupled system of n components can have up to O(n^2) internal connections.">
     <img src="/images/decouple.png" alt="decouple" style="width: 70%; height: auto; float: left" title="Decoupling can help improve maintainability, but at the cost of flexibility.">
 </div>
 
@@ -192,8 +192,8 @@ Existing AIs that satisfy both controllability and developer friendly are mainly
 Traditional symbolism is not useful for most AI applications because it is extremely inflexible, so it is also unsuitable for developing AGI. However, we find it tempting to trade a part of the flexibility for controllability. Instead of insisting on putting all the real-life elements into a narrow framework so that everything can be inferred for a reason, what we want is just to make sure we understand and can conveniently modify any important parts in the AI system. Neuro-symbolic AI, for example, does not explain itself about how they come up with an intermediate result using fuzzy logic (for example, inspecting an image), but it is ok since it's not the core logic of AI and does not need much control. Even if these fuzzy components fail, it is not a big deal as long as we can trace the call stack and find out exactly which component fails. Therefore, neuro-symbolic AIs can outperform end-to-end connectionist AIs in complex situations that require both perceptions and logical reasoning.
 
 <div style="display: flex; align-items: flex-start">
-    <span style="width: 20%"></span>
-    <img src="/images/neurosymbolic.ppm" alt="neuro symbolic" style="width: 60%; height: auto; float: left" title="Neuro-symbolic AI">
+    <span style="width: 10%"></span>
+    <img src="/images/neurosymbolic.ppm" alt="neuro symbolic" style="width: 80%; height: auto; float: left" title="Neuro-symbolic AI">
 </div>
 
 ## Why Controllability & Developer Friendliness
@@ -206,3 +206,8 @@ I think the combination of Controllability and Developer Friendliness is very un
 
 # End of This Chapter
 In the next chapter, we will discuss paradigms and design patterns, and their theoretical and practical relationships.
+
+<div style="display: flex; align-items: flex-start">
+    <span style="width: 10%"></span>
+    <img src="/images/anime.jpg" alt="anime girl" style="width: 80%; height: auto; float: left" title="See you in the next chapter">
+</div>
