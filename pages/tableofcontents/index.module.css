@@ -1,12 +1,14 @@
 .background{
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
-    color: rgb(0, 76, 255);
+    color: black;
+    text-shadow: 1px 1px 3px white;
 }
 .table{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     color: white;
+    text-shadow: 1px 1px 3px black;
     font-style: italic;
 }
 .button{

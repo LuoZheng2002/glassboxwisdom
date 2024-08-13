@@ -1,7 +1,6 @@
 .markdown {
     /* // some root styles here */
-    overflow-y: auto;
-    height:100%;
+    
   }
   
   .markdown ul {
@@ -19,11 +18,16 @@
     font-size: clamp(20px, 2vw, 40px);
     font-weight: 400; 
     white-space: pre-wrap;
+    margin: clamp(15px, 1.5vw, 20px) 0;
   }
   /* // your other styles but all under .reactMarkDown blocks */
 
   .markdown h1{
     font-size: clamp(30px, 3vw, 60px);
+    font-weight: bold;
+  }
+  .markdown h2{
+    font-size: clamp(25px, 2.5vw, 50px);
     font-weight: bold;
   }
 

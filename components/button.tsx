@@ -1,36 +1,16 @@
 // components/AdjustableButton.tsx
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 import styled from 'styled-components';
-
+import style from './button.module.css'
 interface AdjustableButtonProps {
-  children: string;
-  textSize: string;
-  onClick?: () => void;
+  children: string| JSX.Element | JSX.Element[];
+  textsize: string;
+  onClick: MouseEventHandler<HTMLDivElement>;
 }
 
-const Button = styled.button<{ textSize: string }>`
-  background-color: rgba(128, 128, 128, 0.5); // Half-transparent gray
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: ${(props) => props.textSize};
-  font-weight: bold;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-  font-family: 'Times New Roman', Times, serif;
 
-  &:hover {
-    background-color: rgba(128, 128, 128, 0.7);
-  }
-`;
-
-const AdjustableButton: React.FC<AdjustableButtonProps> = ({ children, textSize, onClick }) => {
-  return <Button textSize={textSize} onClick={onClick}>{children}</Button>;
+const Button= ({ children, textsize, onClick }: AdjustableButtonProps) => {
+  return <div style={{fontSize: textsize}} onClick={onClick} className={style.button}>{children}</div>
 };
 
-export default AdjustableButton;
+export default Button;

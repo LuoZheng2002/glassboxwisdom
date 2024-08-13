@@ -1,0 +1,8 @@
+.topic{
+    font-size: clamp(30px, 3vw, 60px);
+    padding: 1vw 0vw 1vw 2.5vw;
+    background: linear-gradient(110deg, aqua, rgb(253, 209, 253), pink);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-bottom: -1vw;
+}

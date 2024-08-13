@@ -15,27 +15,26 @@ import Button from '@/components/button';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 type Props = {
-  content: string
 };
 
-export default function Home({ content }: Props) {
+export default function Home({ }: Props) {
   const router = useRouter();
 
   const handleClick = () => {
     // Perform any action before navigation, if needed
     console.log('Button clicked!');
     // Navigate programmatically
-    router.push('/tableofcontents');
+    router.push('/tableofcontents/background');
   };
   const handleClick2 = () =>{
-    router.push('/test');
+    router.push('/tableofcontents/research');
   }
   const handleClick3 = () =>{
-    router.push('/test');
+    router.push('/tableofcontents/demo');
   }
 
   return (
-    <div style={{flexGrow: "1", display: "flex", backgroundColor:"yellow", flexDirection:"column"}}>
+    <div style={{flexGrow: "1", display: "flex", flexDirection:"column"}}>
       <Head>
         <title>Glass Box Wisdom</title>
         <meta name="description" content="This is an awesome page built with Next.js" />
@@ -46,11 +45,10 @@ export default function Home({ content }: Props) {
           <div style={{ fontSize: "5vw", margin: "1vw 0 0 0", textAlign: "center" }} className={style.welcomecolor}>Welcome AI enthusiast!</div>
           <div style={{ fontSize: "3vw", margin: "0 0 0 2vw" }} className={style.intro}>
             glassboxwisdom.com is a place for&nbsp;
-            <span>Explicit</span> and&nbsp;
-            <span>Explainable</span> AI, <br></br>
-            &nbsp;&nbsp;&nbsp;&nbsp;that combines&nbsp;
-            <span>Symbolism</span> with&nbsp;
-            <span>Connectionism</span>.
+            <span>glass-box-level explainable</span> AI, <br></br>
+            &nbsp;&nbsp;&nbsp;&nbsp;that utilizes both&nbsp;
+            <span>Symbolism</span> and&nbsp;
+            <span>Connectionism</span>&nbsp;approaches.
           </div>
           <div style={{ display: "flex", flexGrow: "1" }}>
             <div style={{ width: "30%", height: "auto", position: "relative", display: "flex" }}>
@@ -62,11 +60,14 @@ export default function Home({ content }: Props) {
               </div>
 
             </div>
-            <div style={{display: "flex", alignItems: "center", flexGrow: "1", flexDirection: "column" }}>
+            <div style={{display: "flex", alignItems:"start", marginLeft:"2vw", flexGrow: "1", flexDirection: "column" }}>
               <div style={{display: "flex"}} className={style.journey}>Let's dive into the journey! (Click↓)</div>
-              <Button onClick={handleClick}  textSize='2.5vw'>Background Knowledge & Inspirations</Button>
-              <Button onClick={handleClick2} textSize='2.5vw'>Research and Implementation Plan</Button>
-              <Button onClick={handleClick3} textSize='2.5vw'>Demo</Button>
+              <div style={{display: "flex", flexDirection: "column", alignItems: "start", marginLeft: "5vw"}}>
+                <Button onClick={handleClick}  textsize='2.5vw'>Background Knowledge & Inspirations</Button>
+                <Button onClick={handleClick2} textsize='2.5vw'>Research and Implementation Plan</Button>
+                <Button onClick={handleClick3} textsize='2.5vw'>Demo</Button>
+              </div>
+              
             </div>
           </div>
 
@@ -78,12 +79,9 @@ export default function Home({ content }: Props) {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const contentDirectory = path.join(process.cwd(), 'markdown');
-  const fullPath = path.join(contentDirectory, 'introduction.md');
-  const content = fs.readFileSync(fullPath, 'utf8');
   return {
     props: {
-      content: content
+
     }
   };
 }
