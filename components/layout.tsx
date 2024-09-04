@@ -1,6 +1,7 @@
 import Image from "next/image"
 import glassblock from "images/glassblock.webp"
 import style from "./layout.module.css"
+import Link from "next/link";
 type Prop = {
     children: JSX.Element;
 }
@@ -16,7 +17,9 @@ export default function Layout({children}: Prop) {
                 <span className={style.description}>We are committed to providing an explicit & explainable AI solution.</span>
             </div>
             {children}
-            <div style={{backgroundColor:"lightgray", textAlign:"center", fontSize:"10px"}}>沪ICP备2024082259号</div>
+            <Link href="https://beian.miit.gov.cn/">
+                <div style={{backgroundColor:"lightgray", textAlign:"center", fontSize:"10px"}}>沪ICP备2024082259号</div>
+            </Link>
         </div>
     )
   }
